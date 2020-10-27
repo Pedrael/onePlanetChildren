@@ -1,0 +1,35 @@
+#screen3 {
+  background: url('../img/screen3-bg.png');
+  @include margin-padding(('p-t': (75 0.5), 'p-b': (150 0.5) ));
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include min-height(890, 1);
+
+  .content {
+    @include width(730, 0.8);
+    @include margin-padding(('m-l': (400 1) ));
+  }
+
+  .title {
+    @include margin-padding(('m-b': (45, 0.5) ));
+    h3 {
+      color: $gray;
+      @include margin-padding(('m-t': (15 0.5) ));
+    }
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    @include margin-padding(('m-b': (20 0.5) ));
+    &:before {
+      display: block;
+      content: '';
+      @include min-width(7, 0.1);
+      @include min-height(7, 0.1);
+      border-radius: 50%;
+      @include margin-padding(('m-r': (7 0.1) ));
+      background: #a3cd5b;
+    }
+  }
+}
