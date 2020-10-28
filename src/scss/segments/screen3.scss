@@ -3,6 +3,7 @@
   @include margin-padding(('p-t': (75 0.5), 'p-b': (150 0.5) ));
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   @include min-height(890, 1);
 
   .content {
@@ -18,9 +19,16 @@
     }
   }
 
+  .not-book {
+    font-family: "Uni Neue";
+  }
+
+
   .list-item {
     display: flex;
     align-items: center;
+    font-family: "Uni Neue Book";
+
     @include margin-padding(('m-b': (20 0.5) ));
     &:before {
       display: block;
@@ -31,5 +39,11 @@
       @include margin-padding(('m-r': (7 0.1) ));
       background: #a3cd5b;
     }
+  }
+
+  .trophey-wrap {
+    @include width(345, 1);
+    left: RelativeUnits(-75, 1);
+    bottom: RelativeUnits(-155, 1);
   }
 }

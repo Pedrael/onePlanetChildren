@@ -1,0 +1,107 @@
+#screen1 {
+  background: url('../img/teaser-bg.png');
+  background-size: cover;
+  background-position: right bottom;
+  @include min-height(970, 1);
+  width: 100vw;
+
+  .logo-wrap {
+    position: absolute;
+    @include width(250, 0.5);
+    top: RelativeUnits(-100, 0.5);
+    left: 16%;
+  }
+
+  .teaser-text {
+    @include margin-padding(('m-t': (150 0.5), 'm-l': (230 0.5) ));
+
+    .line-wrap {
+      @include margin-padding(('m-t': (30 0.5), 'm-r': (10 0.5) ));
+      @include min-width(120, 0.5);
+    }
+
+    .w-bg {
+      @include min-width(419, 0.5);
+      @include width(419, 0.5);
+      @include height(61, 0.5);
+      @include border-radius(6);
+      @include margin-padding(('m-t': (10 0.5) ));
+      background-color: #ffd97d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+
+      &:after {
+        content: '';
+        background: url('../img/clock.png');
+        display: block;
+        @include min-width(30, 0.5);
+        @include height(30, 0.5);
+        @include margin-padding(('m-l': (15 0.5) ));
+      }
+    }
+  }
+
+  .main-container {
+    bottom: 5%;
+    left: 15%;
+    @include width(860, 0.5);
+  }
+
+  .container-w-btn {
+    @include width(540, 0.5);
+    @include min-height(372, 0.5);
+    @include border-radius(20);
+    filter: drop-shadow(0 0 37.5px rgba(32,44,83,0.1));
+    background-color: #ffffff;
+
+    &:after {
+      content: '';
+      display: block;
+      @include width(520, 0.5);
+      @include min-height(352, 0.5);
+      border: 1px solid #e3e3ef;
+      position: absolute;
+      @include border-radius(20);
+      top: RelativeUnits(10, 0.5);
+    }
+
+    h3 {
+      font-weight: 100;
+      @include width(500, 0.5);
+      @include margin-padding(('m-t': (10 0.5), 'm-b': (20 0.5) ));
+    }
+
+    .frank-wrap {
+      @include min-width(128, 0.5);
+      @include height(128, 0.5);
+      @include margin-padding(('m-t': (-50 0.5) ));
+    }
+  }
+
+  .arrow-wrap {
+    bottom: 50%;
+    left: RelativeUnits(550, 0.5);
+    @include min-width(205, 0.5);
+  }
+
+  .yt-container {
+    right: 0;
+    top: RelativeUnits(-50, 0.5);
+    @include width(154, 0.5);
+    @include min-height(166, 0.5);
+    @include border-radius(12);
+    filter: drop-shadow(0 0 24px rgba(103,117,163,0.1));
+    background-color: #ffffff;
+
+    .img-wrap {
+      @include min-width(65, 0.5);
+      @include margin-padding(('m-t': (30 0.5) ));
+    }
+
+    h5 {
+      font-weight: 100;
+    }
+  }
+}

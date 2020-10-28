@@ -83,6 +83,10 @@ $GLOBAL_SCALER: desktop-middle;
   max-width: RelativeUnits($max-width, $scaler, $mode, horizontal);
 }
 
+@mixin height($min-height, $scaler: 1, $mode: $GLOBAL_SCALER) {
+  height: RelativeUnits($min-height, $scaler, $mode, horizontal);
+}
+
 @mixin min-height($min-height, $scaler: 1, $mode: $GLOBAL_SCALER) {
   min-height: RelativeUnits($min-height, $scaler, $mode, horizontal);
 }
