@@ -1,11 +1,15 @@
 #screen2 {
-  @include margin-padding(('p-t': (55 0.5), 'p-b': (120, 1)));
+  @include margin-padding(('p-t': (55 0.5), 'p-b': (120, 0.7)));
   overflow: hidden;
 
   .title {
     h3 {
       color: $gray;
-      @include margin-padding(('m-t': (25 0.5), 'm-b': (60 0.5) ));
+      @include margin-padding(('m-t': (25 0.8), 'm-b': (60 0.5) ));
+    }
+
+    .img-wrap {
+      @include width(44, 0.5);
     }
   }
 
@@ -131,7 +135,59 @@
 
   .key-wrap {
     @include width(364, 1);
-    left: RelativeUnits(-200, 1);
+    left: 1%;//RelativeUnits(-200, 1);
     top: 40%;
+  }
+
+  @include _phone-big {
+    .hand-wrap {
+      display: none;
+    }
+
+    .title {
+      h3 {
+        color: $gray;
+        margin-bottom: 60px;
+      }
+
+      h2 {
+        width: 270px;
+        text-align: center;
+      }
+
+      .img-wrap {
+        margin-bottom: 5px;
+      }
+    }
+
+    .items-array {
+
+      .item {
+        background: #fff;
+        flex-direction: column;
+        margin-bottom: 55px;
+        position: relative;
+      }
+
+      .video-preview {
+        margin-top: -27px;
+        margin-left: 0;
+        width: 113px;
+        min-height: 79px;
+      }
+
+      .text-container {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .grad-circle {
+          left: -5px;
+          top: -5px;
+        }
+      }
+    }
   }
 }

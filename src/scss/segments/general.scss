@@ -20,13 +20,18 @@ h2, h3, h4, h5, a, p { color: #000; }
 h2 {
   @include FontLineSize(0.4, 0.4, 0.2, 56, 7);
   font-weight: 100;
+  @include _phone-big {
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 38px;
+  }
 }
 h3 {
-  @include FontLineSize(0.2, 0.2, 0.6, 20, 7);
+  @include FontLineSize(0.3, 0.3, 0.4, 20, 7);
   font-weight: 400;
 }
 h4 {
-  @include FontLineSize(0.2, 0.2, 0.6, 17, 7);
+  @include FontLineSize(0.25, 0.25, 0.5, 17, 7);
   font-weight: 400;
 }
 h5 {
@@ -54,10 +59,10 @@ $yellow: #ffd97d;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  @include min-width(367, 0.3);
-  @include min-height(86, 0.3);
+  @include min-width(367, 0.39);
+  @include min-height(86, 0.39);
   @include border-radius(14);
-  @include margin-padding(('p-l': (13 0.3), 'p-r': (13 0.3) ));
+  @include margin-padding(('p-l': (13 0.51), 'p-r': (13 0.51) ));
   filter: drop-shadow(0px 6px 0px #8ab249);
   background-image: linear-gradient(0deg, #94c14c 0%, #a6ce5d 100%);
   position: relative;
@@ -68,7 +73,7 @@ $yellow: #ffd97d;
   h5 {
     font-weight: 500;
     color: #fff;
-    @include FontLineSize(0.2, 0.2, 0.6, 16, 7);
+    @include FontLineSize(0.25, 0.25, 0.5, 16, 7);
     letter-spacing: 1px;
     filter: drop-shadow(0px 2px 2.5px #7ea245);
     text-transform: uppercase;
@@ -98,9 +103,9 @@ $yellow: #ffd97d;
   }
 
   .img-wrap {
-    @include min-width(26, 0.5);
-    @include width(26, 0.5);
-    @include margin-padding(('m-l': (13 0.3), 'm-b': (10 0.5) ));
+    @include min-width(26, 0.39);
+    @include width(26, 0.39);
+    @include margin-padding(('m-l': (13 0.3), 'm-b': (10 0.39) ));
   }
 }
 
@@ -113,7 +118,7 @@ $yellow: #ffd97d;
 
   .before-text {
     @include margin-padding(('m-r': (13 0.2) ));
-    @include width(22, 0.2);
+    @include width(22, 0.39);
   }
 
   .underbutton-shadow {
@@ -121,9 +126,9 @@ $yellow: #ffd97d;
       box-shadow: 0px 12px 16px -5px #9fc957;
       background: transparent;
       display: block;
-      @include min-width(367, 0.3);
-      @include min-height(86, 0.3);
-      @include margin-padding(('m-t': (-86 0.3), 'm-b': (25 0.2) ));
+      @include min-width(367, 0.39);
+      @include min-height(86, 0.39);
+      @include margin-padding(('m-t': (-86 0.39), 'm-b': (25 0.39) ));
       z-index: 0;
   }
 }
@@ -149,33 +154,6 @@ $yellow: #ffd97d;
     overflow: hidden;
     position: relative;
   }
-
-  // .video-title {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   @include width(500, 0.7);
-  //   @include height(65, 0.5);
-  //   position: absolute;
-  //   top: RelativeUnits(-35, 0.5);
-  //   left: -5px;
-  //   z-index: 2;
-  //   h3 {
-  //     color: #fff;
-  //     @include FontLineSize(0.35, 0.35, 0.3, 24, 7);
-  //   }
-  //
-  //     &:before {
-  //       display: block;
-  //       position: absolute;
-  //       width: 100%;
-  //       height: 100%;
-  //       transform: skewX(-25deg);
-  //       @include border-radius(7);
-  //       background: #545C94;
-  //       content: '';
-  //     }
-  //   }
 
   iframe {
     border: 0;

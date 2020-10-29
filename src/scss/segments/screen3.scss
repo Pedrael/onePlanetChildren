@@ -1,13 +1,14 @@
 #screen3 {
-  background: url('../img/screen3-bg.png');
+  background: #c0c0c0; //TODO//url('../img/screen3-bg.png');
   @include margin-padding(('p-t': (75 0.5), 'p-b': (150 0.5) ));
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center bottom;
   position: relative;
   @include min-height(890, 1);
 
   .content {
-    @include width(730, 0.8);
+    @include width(730, 0.75);
     @include margin-padding(('m-l': (400 1) ));
   }
 
@@ -25,18 +26,22 @@
 
 
   .list-item {
-    display: flex;
-    align-items: center;
+    //display: list-item;
+    //list-style-type: disc;
+    //list-style-position: inside;
     font-family: "Uni Neue Book";
-
+    width: 100%;
     @include margin-padding(('m-b': (20 0.5) ));
+
     &:before {
-      display: block;
+      display: inline-block;
       content: '';
       @include min-width(7, 0.1);
       @include min-height(7, 0.1);
+      @include max-width(7, 0.1);
+      @include max-height(7, 0.1);
       border-radius: 50%;
-      @include margin-padding(('m-r': (7 0.1) ));
+      @include margin-padding(('m-r': (7 0.1), 'm-b': (2 0.1) ));
       background: #a3cd5b;
     }
   }
@@ -45,5 +50,42 @@
     @include width(345, 1);
     left: RelativeUnits(-75, 1);
     bottom: RelativeUnits(-155, 1);
+  }
+
+  .frank-wrap {
+    @include width(840, 1.15);
+    right: 3%;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  @include _tablet-middle {
+    padding-bottom: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .frank-wrap {
+      width: 270px;
+      right: calc(50% - 135px);
+      bottom: RelativeUnits(80, 0.5);
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .content {
+      width: Max(70vw, 290px);
+      margin: 0 !important;
+      @include margin-padding(('m-l': (400 1) ));
+    }
+
+    .trophey-wrap {
+      width: 100px;
+      left: auto;
+      right: -20px;
+      bottom: 180px;
+    }
   }
 }

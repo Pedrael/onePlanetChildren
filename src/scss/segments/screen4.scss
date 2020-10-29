@@ -1,8 +1,13 @@
 #screen4 {
 
+  h2 {
+    max-width: 46vw;
+  }
+
   .partners {
     @include width(1110, 0.5);
     max-width: 80vw;
+    min-width: 290px;
     @include min-height(225, 0.5);
     @include border-radius(14);
     filter: drop-shadow(0 0 37.5px rgba(32,44,83,0.08));
@@ -48,9 +53,9 @@
 
   .green-button {
     .img-wrap {
-      @include min-width(29, 0.5);
-      @include width(29, 0.5);
-      @include margin-padding(('m-l': (18 0.3), 'm-b': (0 0.5) ));
+      @include min-width(29, 0.39);
+      @include width(29, 0.39);
+      @include margin-padding(('m-l': (18 0.39), 'm-b': (0 0.39) ));
     }
   }
 
@@ -58,5 +63,18 @@
     @include width(400, 1);
     right: RelativeUnits(25, 1);
     top: 20%;
+  }
+
+  @include _tablet-small {
+    h2 {
+      max-width: 280px;
+    }
+
+    .micro-wrap {
+      right: auto;
+      left: 0;
+      top: auto;
+      bottom: 46%;
+    }
   }
 }
