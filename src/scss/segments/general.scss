@@ -143,6 +143,21 @@ $yellow: #ffd97d;
     0% { transform: translateY(0px); }
    100% {  transform: translateY(-3px);  } }
 
+  @keyframes move-item {
+   0% { transform: translateY(0px); }
+  100% {  transform: translateY(-12px);  } }
+
+  @keyframes move-item-2 {
+   0% { transform: translateY(0px); }
+  100% {  transform: translateY(12px);  } }
+
+  .animated {
+    animation: 1s linear infinite alternate move-item;
+  }
+  .animated-2 {
+    animation: 1s linear infinite alternate move-item-2;
+  }
+
 
 .video-container {
   position: relative;
