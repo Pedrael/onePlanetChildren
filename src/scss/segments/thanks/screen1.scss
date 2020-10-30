@@ -1,0 +1,131 @@
+#ty-screen1 {
+
+  @include min-height(913, 0.5);
+
+  .logo-wrap {
+    position: absolute;
+    @include width(250, 0.29);
+    top: RelativeUnits(-100, 0.29);
+    left: 16%;
+  }
+
+  .loading-container {
+    align-self: flex-end;
+    @include margin-padding(('m-r': (100 1) ));
+
+    .loading-title {
+      color: #919ab6;
+      text-align: center;
+      font-weight: 500;
+      @include margin-padding(('m-b': (10 0.1) ));
+    }
+  }
+
+  .loading-bar, .loading-progress {
+    @include width(340, 0.2);
+    @include height(60, 0.2);
+    @include min-width(340, 0.2);
+    @include min-height(60, 0.2);
+    @include border-radius(32);
+  }
+
+  .loading-bar {
+    background-color: #eaeff7;
+    overflow: hidden;
+  }
+
+  .loading-progress {
+    left: -25%;
+    background: url('../img/stripes.png'), #a3cd5b;
+    background-size: 130% auto;
+    background-position: center;
+  }
+
+  .loading-text {
+    font-size: RelativeUnits(16, 0.2);
+    letter-spacing: RelativeUnits(1, 0.2);
+    line-height: RelativeUnits(18, 0.2);
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    filter: drop-shadow(0px 2px 2px rgba(81,108,34,0.4));
+  }
+
+  .w-line {
+    @include border-radius(6);
+    background-color: #fee6a5;
+    padding: RelativeUnits(3, 0.2) RelativeUnits(10, 0.2);
+  }
+
+  .main-content {
+    @include width(840, 0.4);
+    @include margin-padding(('m-l': (375 1), 'm-t': (100, 0.5) ));
+
+    h2 {
+      @include FontLineSize(0.3, 0.3, 0.4, 40, 20);
+      letter-spacing: 1px;
+      font-weight: 400;
+      @include margin-padding(('m-t': (20, 0.5), 'm-b': (20, 0.5) ));
+    }
+
+    .circles-text {
+      line-height: RelativeUnits(34, 0.2);
+      @include margin-padding(('m-b': (30, 0.5) ));
+    }
+
+    .circles-wrap {
+      @include min-width(48, 0.2);
+      @include width(48, 0.2);
+      @include margin-padding(('m-t': (6, 0.2), 'm-r': (10, 0.2) ));
+      height: 100%;
+      display: block;
+    }
+
+    .container-lined {
+      @include width(720, 0.66);
+      @include border-radius(20);
+      filter: drop-shadow(0 0 37.5px rgba(32,44,83,0.1));
+      background-color: #ffffff;
+      padding: RelativeUnits(10, 0.66);
+
+      &:after {
+        content: '';
+        display: block;
+        width: calc(100% - #{RelativeUnits(20, 0.66)});
+        height: calc(100% - #{RelativeUnits(20, 0.66)});
+        top: RelativeUnits(10, 0.66);
+        border: 1px solid #e3e3ef;
+        position: absolute;
+        @include border-radius(20);
+        top: RelativeUnits(10, 0.29);
+      }
+
+      .item, .c-title {
+        @include min-height(83, 0.2);
+      }
+
+      h3 {
+        max-height: -moz-fit-content;
+        min-height: -moz-fit-content;
+      }
+
+      .item {
+        padding: 0 RelativeUnits(15, 0.66);
+        border-top: 1px dashed #e3e3ef;
+        width: 100%;
+      }
+
+      .icon-wrap {
+        @include min-width(45, 0.66);
+        @include min-height(45, 0.66);
+        @include margin-padding(('m-r': (20, 0.66), 'm-t': (6, 0.66) ));
+      }
+    }
+  }
+
+  .frank-wrap {
+    @include width(865, 1);
+    bottom: 0;
+    right: 0;
+  }
+}
