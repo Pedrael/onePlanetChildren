@@ -161,27 +161,3 @@ $yellow: #ffd97d;
   .animated-2 {
     animation: 1s linear infinite alternate move-item-2;
   }
-
-
-.video-container {
-  position: relative;
-
-  .video-itself {
-    @include width(920, 0.8);
-    padding-top: RelativeUnits(500, 0.8);
-    @include border-radius(14);
-    overflow: hidden;
-    position: relative;
-  }
-
-  iframe {
-    border: 0;
-    height: 101%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    min-width: 101%;
-    background: #000;
-    overflow: hidden;
-  }
-}

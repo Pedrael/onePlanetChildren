@@ -1,5 +1,9 @@
 #ty-screen1 {
 
+  background: url('../img/ty/bg_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
   @include min-height(913, 0.5);
 
   .logo-wrap {
@@ -97,7 +101,6 @@
         border: 1px solid #e3e3ef;
         position: absolute;
         @include border-radius(20);
-        top: RelativeUnits(10, 0.29);
       }
 
       .item, .c-title {
@@ -107,12 +110,19 @@
       h3 {
         max-height: -moz-fit-content;
         min-height: -moz-fit-content;
+        max-height: fit-content;
+        min-height: fit-content;
+        max-height: -webkit-fit-content;
+        min-height: -webkit-fit-content;
       }
 
       .item {
         padding: 0 RelativeUnits(15, 0.66);
         border-top: 1px dashed #e3e3ef;
         width: 100%;
+        h3 {
+          @include FontLineSize(0.3, 0.3, 0.4, 19, 7);
+        }
       }
 
       .icon-wrap {
@@ -127,5 +137,11 @@
     @include width(865, 1);
     bottom: 0;
     right: 0;
+  }
+
+  .gift-wrap {
+    @include width(410, 1);
+    bottom: 0;
+    left: RelativeUnits(-120, 1);
   }
 }
