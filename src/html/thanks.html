@@ -12,7 +12,7 @@
 
   </head>
 
-  <body>
+  <body class="pos-r">
 
     <section id="ty-screen1" class="flex pos-r">
 
@@ -22,8 +22,8 @@
         <div class="loading-container flex -column -ai-c">
           <h5 class="loading-title">Почти готово...</h5>
           <div class="loading-bar pos-r flex -jc-c -ai-c">
-            <div class="loading-progress pos-a"></div>
-            <h5 class="loading-text pos-a">загрузка: 98%</h5>
+            <div class="loading-progress pos-a" id="loading-progress"></div>
+            <h5 class="loading-text pos-a" id="loading-value">загрузка: 0%</h5>
           </div>
         </div>
 
@@ -31,7 +31,7 @@
 
         <div class="flex circles-and-text">
           <div class="circles-wrap"><img src="img/circles.png" alt=""></div>
-          <h3 class="circles-text"><span class="w-line">Это еженедельные прямые эфиры</span> с разбором сложных жизненных ситуаций, <span class="book">ответами на вопросы и обучением навыкам достижения счастья и успеха.</span></h3>
+          <h3 class="circles-text"><span class="w-line">Это еженедельные прямые эфиры</span> с разбором сложных жизненных ситуаций, <span class="book">ответами на вопросы и обучением НЛП-навыкам для достижения счастья и успеха.</span></h3>
         </div>
 
         <div class="container-lined flex -ai-c -column">
@@ -75,19 +75,19 @@
 
     <section id="ty-screen3" class="flex -jc-c pos-r">
       <div class="price-container flex -column">
-        <h2>Стоимость доступа на 7 дней:</h2>
+        <h2>Демо-доступ на 7 дней:</h2>
 
         <div class="flex tickets-array -wrap -jc-sb">
           <div class="ticket-container flex -column -ai-c">
-            <h4 class="t-title" id="old">Старая цена</h4>
+            <h4 class="t-title" id="old">Цена за месяц</h4>
             <div class="ticket-wrap flex -ai-c -jc-c pos-r">
-              <img src="img/ty/red.png" alt="">
-              <h3 class="price underlined pos-a">990 руб.</h3>
+              <img src="img/ty/red-30.png" alt="">
+              <h3 class="price underlined pos-a">2.900 руб.</h3>
             </div>
           </div>
 
           <div class="ticket-container flex -column -ai-c">
-            <h4 class="t-title" id="new">Новая цена</h4>
+            <h4 class="t-title" id="new">Демо доступ</h4>
             <div class="ticket-wrap flex -ai-c -jc-c pos-r">
               <img src="img/ty/green.png" alt="">
               <h3 class="price pos-a">190 руб.</h3>
@@ -96,11 +96,11 @@
         </div>
 
         <h4 class="warning">
-          Из-за возросшего спроса мы не можем гарантировать текущую специальную цену после <span class="pink-alert" id="today-date">5 октября 2020 года.</span> Зарегистрируйтесь сегодня, в противном случае, вам придется покупать по обычной цене.
+          Из-за растущего спроса мы не можем гарантировать текущую специальную цену после <span class="pink-alert" id="today-date">5 октября 2020 года.</span> Зарегистрируйтесь сегодня, в противном случае, вам придется покупать по обычной цене.
         </h4>
 
         <div class="timer-container flex -column -ai-c">
-          <h3 class="timer-header">Осталось до завершения:</h3>
+          <h3 class="timer-header">Осталось до завершения специального предложения для новых участников:</h3>
           <div class="timer flex -ai-c -jc-c">
             <div class="flex -ai-e">
               <div class="num" id="min">15</div>
@@ -117,7 +117,7 @@
         <h3 class="-text-c">Получите доступ на 7 дней со скидкой <span class="lined">80% за 190 руб.</span></h3>
 
         <div class="button-container flex -column -ai-c">
-          <a href="" class="green-button">
+          <a href="" class="green-button js-open-popup">
             <h5>Получить доступ за 190 руб.</h5>
             <div class="img-wrap"><img loading="lazy" src="img/unlocked.png" alt=""></div>
           </a>
@@ -132,11 +132,84 @@
       </div>
 
       <div class="clock-wrap pos-a"><img src="img/ty/clock.png" alt=""></div>
-      <div class="leaf-wrap pos-a"><img src="img/ty/leaf.png" alt=""></div>
+      <!-- <div class="leaf-wrap pos-a"><img src="img/ty/leaf.png" alt=""></div> -->
 
     </section>
+
+    <!-- <footer id="politics" class="flex -ai-c">
+      <a href="https://oneplanet.club/privacy-policy/">Политика конфиденциальности</a>
+      <a href="https://oneplanet.club/website-terms-of-use/">Пользовательское соглашение</a>
+    </footer> -->
+
+    <div class="popup-message flex -ai-c -jc-c">
+      <div class="content flex -column -ai-c">
+        <div class="cross-wrap js-close-popup"><img src="img/ty/dislike.png" alt=""></div>
+
+        <div class="pre-content flex -column -ai-c">
+          <div class="img-wrap"><img src="img/cursor.png" alt=""></div>
+          <p>Выберите удобный способ получения видео-уроков</p>
+        </div>
+
+        <div class="switch flex">
+          <div class="switch-btn flex -ai-c -jc-c switched">
+            <div class="icon-wrap"><img src="img/phone.png" alt=""></div>
+            соц. сети
+          </div>
+          <div class="switch-btn flex -ai-c -jc-c">
+            <div class="icon-wrap"><img src="img/mail.png" alt=""></div>
+            email
+          </div>
+        </div>
+        <div class="flex -column -ai-c social-if">
+
+          <h2>Быстрая регистрация через:</h2>
+
+          <div class="array flex -jc-sb">
+            <div class="flex -column -ai-c">
+              <a class="wrap" href="https://t.me/OnePlanetClubEventsBot?start=ZGw6NjU4MQ">
+                <img src="img/tg.png" alt="">
+              </a>
+              <p class="sub tg">Telegram</p>
+            </div>
+
+            <div class="flex -column -ai-c">
+              <a class="wrap" href="https://vk.com/app7336203_-197700151#r=ZGw6NjU4MQ">
+                <img src="img/vk.png" alt="">
+              </a>
+              <p class="sub vk">Vkontakte</p>
+            </div>
+
+            <div class="flex -column -ai-c">
+              <a class="wrap" href="https://direct.smartsender.eu/redirect?continue=viber%3A%2F%2Fpa%3Fcontext%3DZGw6NjU4MQ%26chatURI%3Doneplanetclub">
+                <img src="img/vb.png" alt="">
+              </a>
+              <p class="sub vb">Viber</p>
+            </div>
+          </div>
+
+          <div class="list flex -wrap">
+            <div class="item flex">
+              <p class="number flex -ai-c -jc-c">01</p>
+              <p>Выберите социальную сеть</p>
+            </div>
+            <div class="item flex">
+              <p class="number flex -ai-c -jc-c">02</p>
+              <p>После открытия мессенджера, нажмите на кнопку <span class="marked">начать</span> или <span class="marked">запустить</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer id="politics" class="flex -ai-c">
+      <a href="https://oneplanet.club/privacy-policy/">Политика конфиденциальности</a>
+      <a href="https://oneplanet.club/website-terms-of-use/">Пользовательское соглашение</a>
+    </footer>
 
   </body>
 
   <script src="js/bundle.js"></script>
+
+  <!-- <script id="2527bf579061edd786b9a42e9c96cd33149d0c67" src="https://oneplanet.getcourse.ru/pl/lite/widget/script?id=282865"></script> -->
 </html>

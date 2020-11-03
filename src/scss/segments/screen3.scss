@@ -41,7 +41,7 @@
       @include max-width(7, 0.1);
       @include max-height(7, 0.1);
       border-radius: 50%;
-      @include margin-padding(('m-r': (7 0.1), 'm-b': (2 0.9), 'm-l': (-14 0.1) ));
+      @include margin-padding(('m-r': (7 0.1), 'm-b': (2 0.9) ));
       background: #a3cd5b;
     }
   }

@@ -81,10 +81,12 @@
   }
 
   .timer-header {
-    @include FontLineSize(0.25, 0.25, 0.5, 26, 7);
-    letter-spacing: 3px;
+    @include FontLineSize(0.25, 0.25, 0.5, 20, 7);
+    @include width(505, 0.5);
+    letter-spacing: 1px;
+    text-align: center;
     @include margin-padding(('m-b': (30, 0.5) ));
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   .timer {

@@ -17,7 +17,7 @@
   }
 
   .teaser-text {
-    @include margin-padding(('m-t': (150 0.61), 'm-l': (230 1) ));
+    @include margin-padding(('m-t': (150 0.61), 'm-l': (165 1) ));
     @include _desktop-small {
       margin-left: 20px;
     }
